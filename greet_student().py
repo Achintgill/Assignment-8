@@ -1,0 +1,8 @@
+def greet_student(name, message='Welcome to Python Programming'):
+    if not isinstance (name,str) or not isinstance(message,str):
+        raise TypeError("name and message mmust be strings")
+    if not name.strip() or not message.strip():
+        raise ValueError ("name and message cannot be empty")
+    return f"{name},{message}"
+print(greet_student ("Achint"))
+print(greet_student("Achint", message="Good Morning!"))
